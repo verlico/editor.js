@@ -27,6 +27,6 @@ export interface Tooltip {
    * @param {TooltipContent} content
    * @param {TooltipOptions} options
    */
-  onHover: (element: HTMLElement, content: TooltipContent, options?: TooltipOptions) => void;
+  onHover: (element: HTMLElement, content: string, options?: { hidingDelay: number }) => void;
 
 }

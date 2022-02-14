@@ -1,5 +1,5 @@
 import { Tooltip as ITooltip } from '../../../../types/api';
-import type { TooltipOptions, TooltipContent } from 'codex-tooltip/types';
+import type { TooltipContent, TooltipOptions } from 'codex-tooltip/types';
 import Module from '../../__module';
 import { ModuleConfig } from '../../../types-internal/module-config';
 import Tooltip from '../../utils/tooltip';
@@ -40,8 +40,8 @@ export default class TooltipAPI extends Module {
   public get methods(): ITooltip {
     return {
       show: (element: HTMLElement,
-        content: TooltipContent,
-        options?: TooltipOptions
+        content: any,
+        options?: any
       ): void => this.show(element, content, options),
       hide: (): void => this.hide(),
       onHover: (element: HTMLElement,
